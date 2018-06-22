@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a6203bd8-1b01-4322-b734-c8c4ba17723d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../[Lossless]LZW/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../[Lossless]LZW/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/myFiles/compressedFile.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/myFiles/decompressedFile.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/myFiles\compressedFile.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/myFiles\decompressedFile.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MyFile.java" afterPath="$PROJECT_DIR$/src/MyFile.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+              <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -38,13 +43,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyFile.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyFile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding>
-                <element signature="method#MyFile#0;class#MyFile#0" expanded="false" />
                 <element signature="method#setData#0;class#MyFile#0" expanded="false" />
                 <element signature="method#setNodesNumberNumber#0;class#MyFile#0" expanded="false" />
                 <element signature="method#setRoot#0;class#MyFile#0" expanded="false" />
@@ -54,6 +58,7 @@
                 <element signature="method#associate#0;class#MyFile#0" expanded="false" />
                 <element signature="method#dataAverage#0;class#MyFile#0" expanded="false" />
                 <element signature="method#LBG_SPLITTING#0;class#MyFile#0" expanded="false" />
+                <element signature="e#2655#2661#0" expanded="true" />
                 <element signature="method#constructRanges#0;class#MyFile#0" expanded="false" />
                 <element signature="method#compressFile#0;class#MyFile#0" expanded="false" />
                 <element signature="method#decompressFile#0;class#MyFile#0" expanded="false" />
@@ -97,8 +102,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/Range.java" />
         <option value="$PROJECT_DIR$/src/Node.java" />
-        <option value="$PROJECT_DIR$/src/MyFile.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
+        <option value="$PROJECT_DIR$/src/MyFile.java" />
       </list>
     </option>
   </component>
@@ -124,6 +129,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,10 +144,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,7 +283,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="-8" y="-8" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -294,7 +299,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13045882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1321172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -342,7 +347,6 @@
         <state relative-caret-position="540">
           <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
-            <element signature="method#MyFile#0;class#MyFile#0" expanded="false" />
             <element signature="method#setData#0;class#MyFile#0" expanded="false" />
             <element signature="method#setNodesNumberNumber#0;class#MyFile#0" expanded="false" />
             <element signature="method#setRoot#0;class#MyFile#0" expanded="false" />
@@ -352,6 +356,60 @@
             <element signature="method#associate#0;class#MyFile#0" expanded="false" />
             <element signature="method#dataAverage#0;class#MyFile#0" expanded="false" />
             <element signature="method#LBG_SPLITTING#0;class#MyFile#0" expanded="false" />
+            <element signature="e#2655#2661#0" expanded="true" />
+            <element signature="method#constructRanges#0;class#MyFile#0" expanded="false" />
+            <element signature="method#compressFile#0;class#MyFile#0" expanded="false" />
+            <element signature="method#decompressFile#0;class#MyFile#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="method#Range#0;class#Range#0" expanded="false" />
+            <element signature="method#Range#1;class#Range#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="method#Node#0;class#Node#0" expanded="false" />
+            <element signature="method#Node#1;class#Node#0" expanded="false" />
+            <element signature="method#display#0;class#Node#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding>
+            <element signature="method#setData#0;class#MyFile#0" expanded="false" />
+            <element signature="method#setNodesNumberNumber#0;class#MyFile#0" expanded="false" />
+            <element signature="method#setRoot#0;class#MyFile#0" expanded="false" />
+            <element signature="method#writeString#0;class#MyFile#0" expanded="false" />
+            <element signature="method#getVariance#0;class#MyFile#0" expanded="false" />
+            <element signature="method#getLeastVarianceNode#0;class#MyFile#0" expanded="false" />
+            <element signature="method#associate#0;class#MyFile#0" expanded="false" />
+            <element signature="method#dataAverage#0;class#MyFile#0" expanded="false" />
+            <element signature="method#LBG_SPLITTING#0;class#MyFile#0" expanded="false" />
+            <element signature="e#2655#2661#0" expanded="true" />
             <element signature="method#constructRanges#0;class#MyFile#0" expanded="false" />
             <element signature="method#compressFile#0;class#MyFile#0" expanded="false" />
             <element signature="method#decompressFile#0;class#MyFile#0" expanded="false" />
@@ -393,12 +451,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding>
-            <element signature="method#MyFile#0;class#MyFile#0" expanded="false" />
             <element signature="method#setData#0;class#MyFile#0" expanded="false" />
             <element signature="method#setNodesNumberNumber#0;class#MyFile#0" expanded="false" />
             <element signature="method#setRoot#0;class#MyFile#0" expanded="false" />
@@ -408,18 +473,11 @@
             <element signature="method#associate#0;class#MyFile#0" expanded="false" />
             <element signature="method#dataAverage#0;class#MyFile#0" expanded="false" />
             <element signature="method#LBG_SPLITTING#0;class#MyFile#0" expanded="false" />
+            <element signature="e#2655#2661#0" expanded="true" />
             <element signature="method#constructRanges#0;class#MyFile#0" expanded="false" />
             <element signature="method#compressFile#0;class#MyFile#0" expanded="false" />
             <element signature="method#decompressFile#0;class#MyFile#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>

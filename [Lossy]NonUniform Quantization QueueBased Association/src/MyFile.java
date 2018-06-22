@@ -16,8 +16,8 @@ public class MyFile {
         data=new Vector<Integer>(1);
         Q_Inverse_list=new Vector<Integer>(1);
         RANGES=new Vector<Range>(1);
-        this.compressedFile = "myFiles\\compressedFile.txt";
-        this.decompressedFile = "myFiles\\decompressedFile.txt";
+        this.compressedFile = "myFiles/compressedFile.txt";
+        this.decompressedFile = "myFiles/decompressedFile.txt";
         nodesNumber=0;
     }
 
