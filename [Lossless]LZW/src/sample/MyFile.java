@@ -7,11 +7,11 @@ import java.lang.reflect.Array;
 
 public class MyFile {
 
-    int numberOfTags;
+    private int numberOfTags;
     private String 	data,
-            rawData,
-            compressedFile,
-            decompressedFile;
+                    rawData,
+                    compressedFile,
+                    decompressedFile;
 
     //constructor
     public MyFile() {
