@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NonUniform_Quantization_CorrectAssociation_QueueBased.iml" filepath="$PROJECT_DIR$/NonUniform_Quantization_CorrectAssociation_QueueBased.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NonUniform_Quantization_GUI.iml" filepath="$PROJECT_DIR$/NonUniform_Quantization_GUI.iml" />
     </modules>
   </component>
 </project>

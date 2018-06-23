@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="50.0" prefHeight="102.0" prefWidth="552.0" style="-fx-background-color: black; -fx-padding: 20;" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="45.0" prefWidth="560.0">
+                    <children>
+                  <Pane prefHeight="47.0" prefWidth="66.0" />
+                        <Label prefHeight="48.0" prefWidth="612.0" style="-fx-font-family: arial; -fx-font-size: 40px;" text="NonUniform Quantization" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="50.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <HBox prefHeight="171.0" prefWidth="600.0" style="-fx-padding: 30;" BorderPane.alignment="CENTER">
+            <children>
+            <VBox prefHeight="99.0" prefWidth="540.0">
+               <children>
+                  <HBox prefHeight="73.0" prefWidth="540.0">
+                     <children>
+                            <TextField fx:id="inputData" prefHeight="33.0" prefWidth="330.0" promptText="Enter data to be compressed" style="-fx-padding: 9;" text="Enter data to be compressed" />
+                            <Pane prefHeight="60.0" prefWidth="10.0" />
+                        <TextField fx:id="inputBits" promptText="Enter Number Of Bits" style="-fx-padding: 9;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="64.0" prefWidth="540.0">
+                     <children>
+                            <Button fx:id="compress" mnemonicParsing="false" onAction="#compress" prefHeight="32.0" prefWidth="160.0" style="-fx-background-color: gray; -fx-font-weight: bold;" text="Compress" textAlignment="CENTER" />
+                            <Pane prefHeight="51.0" prefWidth="10.0" />
+                            <Button fx:id="decompress" mnemonicParsing="false" onAction="#decompress" prefHeight="32.0" prefWidth="160.0" style="-fx-background-color: gray; -fx-font-weight: bold;" text="Decompress" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            </children>
+        </HBox>
+    </center>
+</BorderPane>

@@ -1,3 +1,4 @@
+package sample;
 public class Range {
     private Float  upperLimit,
             lowerLimit;

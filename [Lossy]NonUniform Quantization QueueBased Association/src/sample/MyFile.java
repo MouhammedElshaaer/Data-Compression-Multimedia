@@ -1,16 +1,17 @@
+package sample;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Vector;
 
 public class MyFile {
 
-    private Node root;
-    public Vector<Integer>  data,
+    private treeNode root;
+    public Vector<Integer> data,
             Q_Inverse_list;
     private Vector<Range> RANGES;
     public String   compressedFile,
             decompressedFile;
-    private int nodesNumber;
+    private int treeLevelsNumber;
 
     public MyFile(){
         data=new Vector<Integer>(1);
@@ -18,26 +19,25 @@ public class MyFile {
         RANGES=new Vector<Range>(1);
         this.compressedFile = "myFiles/compressedFile.txt";
         this.decompressedFile = "myFiles/decompressedFile.txt";
-        nodesNumber=0;
+        treeLevelsNumber=0;
     }
 
     public void setData(Vector<Integer> _data){
         for (Integer value:_data) {
             data.add(value);
         }
-        setRoot();
-
-    }
-    public void setNodesNumberNumber(int bitsNumber) {
-        int _nodesNumber= (int)Math.pow(2,bitsNumber+1)-1;
-        this.nodesNumber = _nodesNumber;
-    }
-    public void setRoot(){
-
-        root=new Node(dataAverage(data),0);
+        //System.out.println(data);
+        float average=this.dataAverage(data);
+        root=new treeNode(average,0,null,null);
         root.setDataList(data);
     }
-    public Node getRoot() {
+
+    public void setTreeLevelNumber(int bitsNumber) {
+        int _treeLevelNumber= (int)(Math.log10(Math.pow(2,bitsNumber))/Math.log10(2))+1;
+        this.treeLevelsNumber = _treeLevelNumber;
+    }
+
+    public treeNode getRoot() {
         return root;
     }
 
@@ -47,26 +47,10 @@ public class MyFile {
         out.close();
 
     }//end of writeString() method
-    public static int getVariance(Integer value,Node _node){
-        return  (int)Math.pow((double) (value-_node.getSplittingValue()),2);
-    }
-    public static Node getLeastVarianceNode(Integer value,Node _node,Node leastVarianceNode){
-        if(leastVarianceNode==null){
-            return _node;
-        }else if(getVariance(value,_node)<getVariance(value,leastVarianceNode)){
-            return _node;
-        }else{
-            return leastVarianceNode;
-        }
-    }
-    public static void associate(Vector<Node> nodesVector, Vector<Integer> dataList){
-        for(Integer value:dataList){
-            Node leastVarianceNode=null;
-            for(Node _node:nodesVector){
-                leastVarianceNode=getLeastVarianceNode(value,_node,leastVarianceNode);
-            }
-            leastVarianceNode.getDataList().add(value);
-        }
+    public int minVariance(int dataValue, int leftNodeAverage, int rightNodeAverage){
+        double  variance_1=Math.pow((double) (dataValue-leftNodeAverage),2),
+                variance_2=Math.pow((double) (dataValue-rightNodeAverage),2);
+        return Math.min(variance_1,variance_2)==variance_1?leftNodeAverage:rightNodeAverage;
     }
     public float dataAverage(Vector<Integer> dataList){
         float average=0;
@@ -75,35 +59,33 @@ public class MyFile {
         }
         return (float)(average/dataList.size());
     }
-    public void LBG_SPLITTING(){
-        Vector<Node> treeVector=new Vector(1);
-        treeVector.add(root);
-        for(int i=1,blockSize=1;i<nodesNumber;i+=(int)Math.pow(2,blockSize),blockSize++){
-            Vector<Node> tempNodesVec=new Vector<Node>(1);
-            for(int j=i;j<i+Math.pow(2,blockSize);j+=2){//Math.pow(2,i)
-                Node parentNode=treeVector.elementAt((int)Math.ceil((double)((j-1)/2)));
-                int leftChildSplittingValue=(int)(Math.ceil((double)(parentNode.getAverage()-(float)1)));
-                int rightChildSplittingValue=(int)(Math.floor((double)(parentNode.getAverage()+(float)1)));
-                Node leftChild=new Node(0,leftChildSplittingValue);
-                Node rightChild=new Node(0,rightChildSplittingValue);
-                tempNodesVec.add(leftChild);    tempNodesVec.add(rightChild);
-            }
-            associate(tempNodesVec,data);
-
-            for (Node _node:tempNodesVec) {
-                _node.setAverage(dataAverage(_node.getDataList()));
-                treeVector.add(_node);
-            }
-            if(i==nodesNumber-(int)Math.pow(2,blockSize)){
-                for (Node _node:tempNodesVec) {
-                    if(_node.getDataList().size()>0){
-                        Q_Inverse_list.add((int)_node.getAverage());
-                    }
+    public void constructBinaryTree(treeNode currNode,int maxLevel){
+        if(currNode.getNodeLevel()==maxLevel){
+            return;
+        }else{
+            int numLessCurrNodeAv=(int)(Math.ceil((double)(currNode.getAverage()-(float)1)));
+            int numMoreCurrNodeAv=(int)(Math.floor((double)(currNode.getAverage()+(float)1)));
+            treeNode leftChild=new treeNode((float)0, currNode.getNodeLevel()+1,null,null);
+            treeNode rightChild=new treeNode((float)0, currNode.getNodeLevel()+1,null,null);
+            for (Integer value:currNode.getDataList()) {
+                if(minVariance(value,numLessCurrNodeAv,numMoreCurrNodeAv)==numLessCurrNodeAv){
+                    leftChild.getDataList().add(value);
+                }else {
+                    rightChild.getDataList().add(value);
                 }
             }
+            float leftNodeAverage=dataAverage(leftChild.getDataList());
+            float rightNodeAverage=dataAverage(rightChild.getDataList());
+            leftChild.setAverage(leftNodeAverage);  rightChild.setAverage(rightNodeAverage);
+            if(currNode.getNodeLevel()==maxLevel-1){
+                Q_Inverse_list.add((int)currNode.getAverage());
+            }
+            currNode.setLeftChild(leftChild);
+            currNode.setRightChild(rightChild);
+            //recursion
+            constructBinaryTree(currNode.getLeftChild(),maxLevel);
+            constructBinaryTree(currNode.getRightChild(),maxLevel);
         }
-
-        System.out.println("The Q Inverse: "+Q_Inverse_list);
     }
     public void constructRanges(){
         for(int i=0;i<Q_Inverse_list.size();i++){
@@ -127,15 +109,13 @@ public class MyFile {
     }
 
     public void compressFile()throws IOException{
-
-        LBG_SPLITTING();
-        constructRanges();
+        this.constructBinaryTree(this.getRoot(),treeLevelsNumber);
+        this.constructRanges();
         String compressedCode="";
         for (int i=0;i<data.size();i++) {
             for(int j=0;j<RANGES.size();j++){
                 if(RANGES.elementAt(j).exists((float)data.elementAt(i))){
                     compressedCode+=Integer.toString(j);
-                    break;
                 }
             }
             if(i!=data.size()-1){
@@ -144,10 +124,8 @@ public class MyFile {
         }
         writeString(compressedCode,new File(compressedFile));
         System.out.println("compressedCode: "+compressedCode);
-
     }
     public void decompressFile()throws IOException{
-
         String  dataList,
                 decompressedCode="";
         File file=new File(compressedFile);
@@ -163,6 +141,5 @@ public class MyFile {
         writeString(decompressedCode,new File(decompressedFile));
         System.out.println("decompressedCode: "+decompressedCode);
         System.out.println("Original data: "+data);
-
     }
 }
