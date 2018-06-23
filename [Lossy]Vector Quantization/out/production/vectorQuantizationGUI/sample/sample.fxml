@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="50.0" prefHeight="102.0" prefWidth="552.0" style="-fx-background-color: black; -fx-padding: 20;" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="45.0" prefWidth="560.0">
+                    <children>
+                        <Pane prefHeight="47.0" prefWidth="128.0" />
+                        <Label prefHeight="47.0" prefWidth="512.0" style="-fx-font-family: arial; -fx-font-size: 40px;" text="Vector Quantization" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="50.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <HBox prefHeight="171.0" prefWidth="600.0" style="-fx-padding: 30;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="99.0" prefWidth="540.0">
+                    <children>
+                        <HBox prefHeight="62.0" prefWidth="582.0">
+                            <children>
+                                <TextField fx:id="filePath" prefHeight="33.0" prefWidth="295.0" promptText="File path" style="-fx-padding: 9;" text="File path">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></TextField>
+                                <Pane prefHeight="62.0" prefWidth="20.0" />
+                                <TextField fx:id="inputBits" prefHeight="25.0" prefWidth="130.0" promptText="Bits No." style="-fx-padding: 9;" />
+                        <Pane prefHeight="62.0" prefWidth="20.0" />
+                        <TextField fx:id="blockSize" prefHeight="25.0" prefWidth="130.0" promptText="Block Size" style="-fx-padding: 9;" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="44.0" prefWidth="540.0">
+                            <children>
+                        <Pane prefHeight="44.0" prefWidth="301.0" />
+                                <Button fx:id="compress" mnemonicParsing="false" onAction="#compress" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: gray; -fx-font-weight: bold;" text="Compress" textAlignment="CENTER" />
+                                <Pane prefHeight="44.0" prefWidth="18.0" />
+                                <Button fx:id="decompress" mnemonicParsing="false" onAction="#decompress" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: gray; -fx-font-weight: bold;" text="Decompress" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+</BorderPane>

@@ -1,8 +1,7 @@
+package sample;
 import java.util.Vector;
 
 public class Node {
-
-
 
     private Vector<Float>       dataList;
     private Vector<Integer>     splittingValues;

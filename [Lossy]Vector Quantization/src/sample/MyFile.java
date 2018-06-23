@@ -1,3 +1,4 @@
+package sample;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Vector;
@@ -8,7 +9,7 @@ public class MyFile {
     public Vector<Node>  data;
     public Vector<Node>  Q_Inverse_list;
     public String   compressedFile,
-                    decompressedFile;
+            decompressedFile;
     private int nodesNumber,vectorSize,vectorRows,vectorCols,imgHeight,imgWidth;//codeBookSize
 
     public MyFile(){
@@ -216,7 +217,7 @@ public class MyFile {
                 }
             }
         }
-        ImageClass.writeImage(compressedImgPixels,"myFiles/DSC_0077_out.jpg");
+        ImageClass.writeImage(compressedImgPixels,"myFiles\\cameraMan_out.jpg");
 
     }
 }
